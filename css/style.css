@@ -144,6 +144,7 @@ body{
         
     }
 
+
     /*@keyframes mianimacion {
         0% {background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);}
         50% {background-image: linear-gradient(rgba(43, 41, 41, 0.5), rgba(43, 41, 41, 0.5)), url(../img/Perfil.jpg);}
@@ -239,6 +240,15 @@ body{
         margin-bottom: 3.5rem;
         flex-wrap: wrap;
     }
+
+    .productos{
+        height: 160vh;
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+    }
  
 }
 
@@ -257,14 +267,6 @@ body{
         animation-iteration-count: infinite;*/
     }
 
-    .productos{
-        height: 260vh;
-        background-color: pink;
-        display: flex;
-        flex-direction: column;
-        background-size: cover;
-        background-position: center;
-    }
 
     /*@keyframes mianimacion {
         0% {background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);}
@@ -372,6 +374,15 @@ body{
         margin-top: 3.5rem;
         margin-bottom: 3.5rem;
         flex-wrap: wrap;
+    }
+
+    .productos{
+        height: 260vh;
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
     }
 
    
