@@ -1,0 +1,130 @@
+
+body{
+    font-family: 'Roboto Slab', serif;
+    font-size:large;
+    
+}
+
+
+.nav-bar .logo{
+    width: 100px;
+    height: 80px;
+    grid-column: 1 / 3;
+    display: inline-block;
+    animation: bounce; 
+    animation-duration: 2s;
+}
+
+.main h2{
+    font-family: $letraH2;
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 10px;
+    color: $colorLetra;
+    animation: zoomInUp; 
+    animation-duration: 2s;
+}
+.productos h2{
+    font-family: $letraH2;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: $colorLetra;
+    animation: zoomInUp; 
+    animation-duration: 2s;
+}
+
+.main p{
+    font-size: 1.28em;
+    font-family: $letraP;
+    margin-top: 15px;
+    color: $colorLetra;
+    animation: zoomInUp; 
+    animation-duration: 2s;
+}
+
+.main .boton{
+    font-size: 0.6em;
+    background: none;
+    padding: 2px 3px;
+    font-family: $letraBoton;
+    font-size: 1em;
+    margin-top: 10px; 
+    color: $colorBoton;
+}
+
+.main .boton:hover{
+    background-color: $colorBoton;
+    color: $colorLetra;
+    cursor: pointer;
+}
+
+.nav-bar .menu li{
+    list-style: none;
+}
+
+.nav-bar .menu a{
+    text-decoration: none;
+    color: $colorLetra;
+    cursor: pointer;
+}
+
+.nav-bar .menu a:hover{
+    color: $colorBoton;
+}
+
+
+/* section footer */
+
+.footer{
+    display: grid;
+    height: 80px;
+    align-items: center;
+    background-color: $colorFooter;
+    grid-template-rows: "powered social";
+}
+
+.footer .powered h2{
+    grid-template-rows: powered;
+    display: flex;
+    justify-content: center;
+    font-size:medium;
+    color: $colorContenidoFooter;
+   
+}
+
+.footer .social{
+    grid-template-rows: social;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    color: $colorContenidoFooter;
+   
+}
+
+.footer .social .fa-brands{
+    margin-right: 20px;
+    font-size:xx-large;
+    color: $colorContenidoFooter;
+    
+}
+
+.footer .social .fa-regular{
+    margin-left: 5px;
+    color: $colorContenidoFooter ;
+    font-size: 35px;
+    
+}
+
+.footer .social .fa-brands:hover{
+    color: $colorCursor;
+    cursor: pointer;
+}
+
+.footer .social .fa-regular:hover{
+    color: $colorCursor;
+    cursor: pointer;
+}
+
+.carousel-inner{
+    max-height: 39rem;
+}

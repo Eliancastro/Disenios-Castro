@@ -1,0 +1,135 @@
+@media only screen and (max-width:600px){
+    
+    .main{
+        height: 110vh;
+        background-color: $colorMain;
+        display: flex;
+        flex-direction: column;
+        /*background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);*/
+        background-size: cover;
+        background-position: center;
+        /*animation-name: mianimacion;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;*/
+    }
+
+
+    /*@keyframes mianimacion {
+        0% {background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);}
+        50% {background-image: linear-gradient(rgba(43, 41, 41, 0.5), rgba(43, 41, 41, 0.5)), url(../img/Perfil.jpg);}
+        100% {background-image: linear-gradient(rgba(56, 56, 61, 0.5), rgba(56, 56, 61, 0.5)), url(../img/Perfil.jpg);}     
+    }*/
+
+    .title{
+        grid-column: 5 / 6;
+        animation: swing; 
+        animation-duration: 2s;
+    }
+
+    .nav-bar{
+        position: relative;
+        background-color: $colorNavBar;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        align-items: center;
+    }
+
+    .nav-bar .shopping{
+        display: none;
+    }
+
+    .nav-bar .menu{
+        position: absolute;
+        width: 90%;
+        height: 70vh;
+        display: grid;
+        margin-top: 32em;
+        transform: translateX(10%);
+        align-items: center;
+        justify-items: start;
+        justify-content: end;
+    }
+
+    /* section main */
+
+    .main .info-content{
+        grid-column: 1 / 5;
+        grid-row: 2 / 9;
+    }
+    
+    /* section footer */
+
+    .footer .powered{
+        display: none;
+    }
+
+    /* section galeria */
+
+    #grilla{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 200px 200px 200px;
+        justify-items: center;
+        align-items: center;
+        animation: zoomInUp; 
+        animation-duration: 2s;
+    }
+    
+    #grilla div{
+        background-color: $colorGrilla;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .img{
+        height: 100%;
+        width: 100%;
+    }
+
+   
+
+    /* section video */
+
+    #grilla-video{
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: 300px;
+        justify-items: center;
+        align-items: center;
+        animation: zoomInUp; 
+        animation-duration: 2s;
+    }
+    
+    #grilla-video div{
+        background-color: $colorGrilla;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .video{
+        height: 100%;
+        width: 100%;
+    }
+
+    /* section cards */
+
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        flex-wrap: wrap;
+    }
+
+    .productos{
+        height: 260vh;
+        background-color: $colorMain;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+    }
+
+   
+}
