@@ -5,56 +5,44 @@
         background-color: $colorMain;
         display: flex;
         flex-direction: column;
-       /* background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);*/
         background-size: cover;
         background-position: center;
-        /*animation-name: mianimacion;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;*/
-        
+        .main .info-content{
+            grid-column: 1 / 5;
+            grid-row: 4/ 9;
+            color: $colorLetra;
+        }
     }
-
-
-    /*@keyframes mianimacion {
-        0% {background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);}
-        50% {background-image: linear-gradient(rgba(43, 41, 41, 0.5), rgba(43, 41, 41, 0.5)), url(../img/Perfil.jpg);}
-        100% {background-image: linear-gradient(rgba(56, 56, 61, 0.5), rgba(56, 56, 61, 0.5)), url(../img/Perfil.jpg);}     
-    }*/
 
     .title{
         display: none;
         
     }
-
+    
+    
     .nav-bar{
         background-color: $colorNavBar;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         align-items: center;
-    }
-
-    .nav-bar .menu{
+        .nav-bar .menu{
         grid-column: 3 / 8;
         display: flex;
         justify-content: space-around;  
         font-size:small;
-    }
-
-    .nav-bar .shopping{
-        grid-column: 8 / 9;
-        cursor: pointer;
-    }
-
-    /* section main */
-
-    .main .info-content{
-        grid-column: 1 / 5;
-        grid-row: 4/ 9;
-        color: $colorLetra;
+        }
+        .nav-bar .shopping{
+            grid-column: 8 / 9;
+            cursor: pointer;
+        }
+       
     }
 
     /* section galeria */
-
+    @mixin grilla($width, $height) {
+        width: $width;
+        height: $height;
+    }
     #grilla{
         display: grid;
         grid-template-columns: 33% 33% 33%;
@@ -63,21 +51,16 @@
         align-items: center;
         animation: zoomInUp; 
         animation-duration: 2s;
-    }
-    
-    #grilla div{
-        background-color: $colorGrilla;
-        width: 90%;
-        height: 70%;
+        #grilla div{
+            @include grilla(90%, 70%);
+            background-color: $colorGrilla;
+        }
         
+        .img{
+            @include grilla(100%, 100%);
+           
+        }
     }
-    
-    .img{
-        height: 100%;
-        width: 100%;
-       
-    }
-
     
     /* section video */
 
@@ -89,17 +72,14 @@
         align-items: center;
         animation: zoomInUp; 
         animation-duration: 2s;
-    }
-    
-    #grilla-video div{
-        background-color: $colorGrilla;
-        width: 80%;
-        height: 80%;
-    }
-    
-    .video{
-        height: 100%;
-        width: 100%;
+        #grilla-video div{
+            background-color: $colorGrilla;
+            @include grilla(80%, 80%);
+        }
+        
+        .video{
+            @include grilla(100%, 100%);
+        }
     }
 
     .cards{

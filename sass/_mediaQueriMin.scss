@@ -1,24 +1,18 @@
 @media only screen and (max-width:600px){
     
+    /* section main */
     .main{
         height: 110vh;
         background-color: $colorMain;
         display: flex;
         flex-direction: column;
-        /*background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);*/
         background-size: cover;
         background-position: center;
-        /*animation-name: mianimacion;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;*/
+        .main .info-content{
+            grid-column: 1 / 5;
+            grid-row: 2 / 9;
+        }
     }
-
-
-    /*@keyframes mianimacion {
-        0% {background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)), url(../img/Perfil.jpg);}
-        50% {background-image: linear-gradient(rgba(43, 41, 41, 0.5), rgba(43, 41, 41, 0.5)), url(../img/Perfil.jpg);}
-        100% {background-image: linear-gradient(rgba(56, 56, 61, 0.5), rgba(56, 56, 61, 0.5)), url(../img/Perfil.jpg);}     
-    }*/
 
     .title{
         grid-column: 5 / 6;
@@ -26,35 +20,28 @@
         animation-duration: 2s;
     }
 
+    @mixin navBar($posicion) {
+        display: grid;
+        align-items: center;
+        position: $posicion;
+        
+    }
     .nav-bar{
-        position: relative;
+        @include navBar(relative);
         background-color: $colorNavBar;
-        display: grid;
         grid-template-columns: repeat(8, 1fr);
-        align-items: center;
-    }
-
-    .nav-bar .shopping{
-        display: none;
-    }
-
-    .nav-bar .menu{
-        position: absolute;
-        width: 90%;
-        height: 70vh;
-        display: grid;
-        margin-top: 32em;
-        transform: translateX(10%);
-        align-items: center;
-        justify-items: start;
-        justify-content: end;
-    }
-
-    /* section main */
-
-    .main .info-content{
-        grid-column: 1 / 5;
-        grid-row: 2 / 9;
+        .nav-bar .shopping{
+            display: none;
+        }
+        .nav-bar .menu{
+            @include navBar(absolute);
+            width: 90%;
+            height: 70vh;
+            margin-top: 32em;
+            transform: translateX(10%);
+            justify-items: start;
+            justify-content: end;
+        }
     }
     
     /* section footer */
@@ -64,7 +51,10 @@
     }
 
     /* section galeria */
-
+    @mixin grilla($width, $height) {
+        width: $width;
+        height: $height;
+    }
     #grilla{
         display: grid;
         grid-template-columns: 48% 48%;
@@ -73,20 +63,15 @@
         align-items: center;
         animation: zoomInUp; 
         animation-duration: 2s;
+        #grilla div{
+            @include grilla(80%, 80%);
+            background-color: $colorGrilla;
+        }
+        
+        .img{
+            @include grilla(100%, 100%);
+        }
     }
-    
-    #grilla div{
-        background-color: $colorGrilla;
-        width: 80%;
-        height: 80%;
-    }
-    
-    .img{
-        height: 100%;
-        width: 100%;
-    }
-
-   
 
     /* section video */
 
@@ -98,19 +83,16 @@
         align-items: center;
         animation: zoomInUp; 
         animation-duration: 2s;
+        #grilla-video div{
+            background-color: $colorGrilla;
+            @include grilla(80%, 80%);
+        }
+        
+        .video{
+            @include grilla(100%, 100%);
+        }
     }
     
-    #grilla-video div{
-        background-color: $colorGrilla;
-        width: 80%;
-        height: 80%;
-    }
-    
-    .video{
-        height: 100%;
-        width: 100%;
-    }
-
     /* section cards */
 
     .cards{

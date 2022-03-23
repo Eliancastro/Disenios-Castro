@@ -128,6 +128,9 @@ body {
     }*/
   .title {
     display: none; }
+  .queHacer{
+    top: 10px;
+  }
   .nav-bar {
     background-color: #eca9cb;
     display: grid;
@@ -164,7 +167,7 @@ body {
     width: 100%; }
   /* section video */
   #grilla-video {
-    display: grid;
+    display: flex;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 400px;
     justify-items: center;
