@@ -32,6 +32,18 @@ body {
   animation: zoomInUp;
   animation-duration: 2s; }
 
+  .qHacer{
+  font-family: 'Redressed', cursive;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: black;
+  animation: zoomInUp;
+  animation-duration: 2s;
+  }
+  .qHacer h1{
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
 .main p {
   font-size: 1.28em;
   font-family: 'Great Vibes', cursive;
@@ -107,7 +119,9 @@ body {
   cursor: pointer; }
 
 .carousel-inner {
-  max-height: 39rem; }
+  max-height: 39rem; 
+  
+}
 
 @media only screen and (min-width: 600px) {
   .main {
@@ -159,7 +173,7 @@ body {
     animation: zoomInUp;
     animation-duration: 2s; }
   #grilla div {
-    background-color: black;
+    background-color: white;
     width: 90%;
     height: 70%; }
   .img {
@@ -168,10 +182,10 @@ body {
   /* section video */
   #grilla-video {
     display: flex;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 400px;
-    justify-items: center;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
     animation: zoomInUp;
     animation-duration: 2s; }
   #grilla-video div {
@@ -183,8 +197,7 @@ body {
     width: 100%; }
   .cards {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
     flex-wrap: wrap; }
@@ -194,7 +207,17 @@ body {
     display: flex;
     flex-direction: column;
     background-size: cover;
-    background-position: center; } }
+    background-position: center; }
+    .qHacer{
+    height: 280vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center; }
+
+    }
+   
 
 @media only screen and (max-width: 600px) {
   .main {
@@ -260,11 +283,11 @@ body {
     width: 100%; }
   /* section video */
   #grilla-video {
-    display: grid;
-    grid-template-columns: 80%;
-    grid-template-rows: 300px;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
     animation: zoomInUp;
     animation-duration: 2s; }
   #grilla-video div {
@@ -288,4 +311,13 @@ body {
     display: flex;
     flex-direction: column;
     background-size: cover;
-    background-position: center; } }
+    background-position: center; } 
+
+    .qHacer{
+      height: 280vh;
+      background-color: pink;
+      display: flex;
+      flex-direction: column;
+      background-size: cover;
+      background-position: center; }
+  }
