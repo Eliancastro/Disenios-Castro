@@ -125,7 +125,7 @@ body {
 
 @media only screen and (min-width: 600px) {
   .main {
-    height: 130vh;
+    height: 150vh;
     background-color: pink;
     display: flex;
     flex-direction: column;
@@ -202,14 +202,14 @@ body {
     margin-bottom: 3.5rem;
     flex-wrap: wrap; }
   .productos {
-    height: 170vh;
+    height: 200vh;
     background-color: pink;
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-position: center; }
     .qHacer{
-    height: 280vh;
+    height: 370vh;
     background-color: pink;
     display: flex;
     flex-direction: column;
@@ -217,11 +217,21 @@ body {
     background-position: center; }
 
     }
+
+    .galeria{
+    height: 160vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center; }
+    
+    }
    
 
 @media only screen and (max-width: 600px) {
   .main {
-    height: 110vh;
+    height: 100vh;
     background-color: pink;
     display: flex;
     flex-direction: column;
@@ -267,17 +277,17 @@ body {
     display: none; }
   /* section galeria */
   #grilla {
-    display: grid;
-    grid-template-columns: 48% 48%;
-    grid-template-rows: 200px 200px 200px;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
     animation: zoomInUp;
     animation-duration: 2s; }
   #grilla div {
     background-color: black;
-    width: 80%;
-    height: 80%; }
+    width: 70%;
+    height: 55%; }
   .img {
     height: 100%;
     width: 100%; }
@@ -306,7 +316,7 @@ body {
     margin-bottom: 3.5rem;
     flex-wrap: wrap; }
   .productos {
-    height: 260vh;
+    height: 380vh;
     background-color: pink;
     display: flex;
     flex-direction: column;
@@ -314,10 +324,20 @@ body {
     background-position: center; } 
 
     .qHacer{
-      height: 280vh;
+      height: 360vh;
       background-color: pink;
       display: flex;
       flex-direction: column;
       background-size: cover;
       background-position: center; }
+    
+    .galeria{
+      height: 700vh;
+      background-color: pink;
+      display: flex;
+      flex-direction: column;
+      background-size: cover;
+      background-position: center; 
+
+    }
   }
